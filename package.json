@@ -1,0 +1,35 @@
+{
+  "name": "chrome-translation-plugin",
+  "version": "1.5.1",
+  "description": "快捷键翻译英文单词、句子和段落，支持音标与朗读设置",
+  "main": "src/shared.js",
+  "scripts": {
+    "test": "node tests/run-tests.js",
+    "test:browser": "node --test tests/browser.test.js tests/audio-browser.test.js",
+    "bench:cn": "node tests/benchmark_cn_providers.js",
+    "build": "node build.js build",
+    "build:test": "node build.js build:test",
+    "clean": "node build.js clean",
+    "dev": "echo '开发模式：在浏览器扩展管理页面加载 src 目录，修改后重新加载扩展并刷新网页'",
+    "build:zip": "node build.js build:zip",
+    "zip": "node build.js zip",
+    "gen:html": "node build.js gen:html",
+    "test:dj": "node tests/dj_phonetic_convert.test.js"
+  },
+  "keywords": [
+    "chrome-extension",
+    "translation",
+    "ipa",
+    "pronunciation"
+  ],
+  "author": "David Wu",
+  "license": "MIT",
+  "devDependencies": {
+    "archiver": "^7.0.1",
+    "marked": "^16.0.0",
+    "node-fetch": "^2.7.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PRIVACY_POLICY</title><style>body{max-width:860px;margin:40px auto;font-family:system-ui,sans-serif;line-height:1.8;padding:0 20px;color:#25324b}pre{background:#f3f6fa;padding:16px;border-radius:8px;overflow:auto}code{background:#f3f6fa;padding:2px 4px}h1,h2,h3{margin-top:1.8em}a{color:#3267d6}li{margin:6px 0}</style></head><body>
+<h1>Privacy Policy</h1>
+<p>Last updated: October 23, 2026</p>
+<p>This policy describes the network and local data handling in the English-Chinese Translation Chrome Extension.</p>
+<h2>Text sent to external services</h2>
+<p>When you trigger a lookup with the keyboard shortcut or the selection context menu, the extension sends the selected text to translation services. Each lookup is limited to 5,000 characters:</p>
+<ul>
+<li>In automatic mode, the extension checks the browser language and time zone locally. A Chinese language and a configured mainland China, Hong Kong, Macau or Taipei time zone select <code>https://api.yun.info/api/translate</code>; other combinations select <code>https://translate.googleapis.com/translate_a/single</code>. You can override this preference in settings. Either route can fall back to <code>https://api.mymemory.translated.net/get</code> on failure. Longer selections are split into smaller requests when needed.</li>
+<li>For single English words, it also sends the selected word to <code>https://api.dictionaryapi.dev</code> to look up pronunciation and audio. Sentences do not trigger dictionary requests. Clicking dictionary pronunciation loads a recording in the extension&#39;s own audio document, independently of the website&#39;s audio policy. Allowed recording sources are the pronunciation paths on <code>api.dictionaryapi.dev</code>, <code>ssl.gstatic.com</code> and <code>upload.wikimedia.org</code>; legacy protocol-relative URLs are upgraded to HTTPS. Failed recordings can be retried using other URLs from the same lookup. If all recordings fail, the extension clearly indicates a switch to browser speech synthesis. Recording addresses are held in memory for the active lookup, not saved as history.</li>
+</ul>
+<p>The translation and dictionary providers receive the text included in each request and may receive normal connection metadata, such as your IP address. Their handling of this information is governed by their own policies. The extension does not automatically send the full page. It does not use device geolocation or log selected text, request URLs, or translations in production.</p>
+<h2>Speech and local storage</h2>
+<ul>
+<li>Text-to-speech uses the browser&#39;s <code>SpeechSynthesis</code> API. Whether a selected voice works offline depends on the browser, operating system, and voice provider.</li>
+<li>Auto-speech, speech rate, selected voice, phonetic display and translation route preferences are stored in the extension&#39;s <code>chrome.storage.local</code>, shared across websites. Query text and translation history are not saved. The previous website-specific phonetic preference is no longer read or written; an existing value may remain until the website&#39;s storage is cleared.</li>
+<li>Copying a translation writes that translation to the system clipboard only when you click the copy button. The extension does not read the clipboard.</li>
+<li>The extension source contains no analytics or account service. It does not send browsing history to the developer.</li>
+</ul>
+<h2>Contact</h2>
+<p>For questions, contact the maintainers through <a href="https://github.com/whiteCQian/read-aloud-translator/issues">GitHub Issues</a>.</p>
+<hr>
+<h1>隐私政策</h1>
+<p>最后更新：2026 年 10 月 23 日</p>
+<p>本政策说明英汉翻译 Chrome 插件的网络请求和本地数据处理方式。</p>
+<h2>发往外部服务的文本</h2>
+<p>使用快捷键或右键菜单触发查询时，插件会将选中文字发送给翻译服务。每次最多 5,000 个字符：</p>
+<ul>
+<li>自动模式在本地检查浏览器语言和时区。中文语言与配置的中国大陆、香港、澳门或台北时区组合会优先使用 <code>https://api.yun.info/api/translate</code>；其他组合优先使用 <code>https://translate.googleapis.com/translate_a/single</code>。可以在设置中手动选择。两条路由失败时都可改用 <code>https://api.mymemory.translated.net/get</code>；长文本按需要拆分成多次请求。</li>
+<li>只有单个英文单词会额外发送到 <code>https://api.dictionaryapi.dev</code> 查询音标和发音，句段不查询词典。点击词典发音时，扩展自己的音频文档会请求录音，独立于网页的音频策略。仅允许 <code>api.dictionaryapi.dev</code>、<code>ssl.gstatic.com</code> 和 <code>upload.wikimedia.org</code> 上配置的录音路径，旧版无协议地址会升级为 HTTPS。录音失败时可尝试同次词典查询中的其他地址；全部失败后会明确提示并切换为浏览器朗读。录音地址仅为当前查询暂存在内存中，不保存为历史。</li>
+</ul>
+<p>翻译和词典服务会收到请求中的文本，也可能收到 IP 地址等常规连接信息。它们如何处理这些数据由各自的政策决定。插件不会自动上传整页内容，不读取设备地理位置，生产日志不输出选中文字、请求 URL 或译文。</p>
+<h2>语音和本地存储</h2>
+<ul>
+<li>文本朗读使用浏览器的 <code>SpeechSynthesis</code> API。所选语音能否离线使用，取决于浏览器、操作系统和语音提供方。</li>
+<li>自动朗读、语速、所选声音、音标格式和翻译路由保存在扩展自己的 <code>chrome.storage.local</code> 中，跨网站通用；不保存查询文字或翻译历史。旧版网站内的音标偏好不再读取或写入，已有值可能保留至网站存储被清除。</li>
+<li>只有点击复制按钮时，才将当前译文写入系统剪贴板；插件不读取剪贴板。</li>
+<li>插件源码中没有分析统计或账户服务，也不会向开发者发送浏览历史。</li>
+</ul>
+<h2>联系方式</h2>
+<p>如有疑问，可通过 <a href="https://github.com/whiteCQian/read-aloud-translator/issues">GitHub Issues</a>联系维护者；请勿公开个人信息或敏感选文。</p>
+
+</body></html>

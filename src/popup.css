@@ -1,0 +1,48 @@
+:root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif; color: #25324b; background: #f7f9fc; font-size: 13px; }
+* { box-sizing: border-box; }
+body { width: 390px; max-width: 100vw; margin: 0 auto; }
+main { padding: 23px 22px 16px; }
+button, select, input { font: inherit; }
+button { cursor: pointer; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid #3267d6; outline-offset: 3px; }
+.heading { display: flex; align-items: center; gap: 11px; margin-bottom: 23px; }
+.logo { display: grid; place-items: center; width: 39px; height: 39px; border: 1px solid #dae5fa; border-radius: 11px; background: #eaf1ff; font-size: 22px; color: #3267d6; font-weight: 500; }
+h1 { margin: 0; font-size: 17px; font-weight: 650; letter-spacing: .5px; }
+.heading p { margin: 4px 0 0; font-size: 11px; color: #8993a5; }
+.version { margin-left: auto; padding: 3px 7px; border: 1px solid #e1e6ef; border-radius: 5px; color: #8993a5; font-size: 10px; }
+.intro { padding: 19px 20px 15px; border: 1px solid #dce5f4; border-radius: 14px; background: #eef3fc; }
+.section-label { font-size: 10px; color: #6282b4; letter-spacing: 2px; font-weight: 650; }
+.intro h2 { font-size: 18px; font-weight: 600; letter-spacing: -.3px; margin: 11px 0 8px; }
+.intro p { color: #7a88a1; font-size: 12px; line-height: 1.85; margin: 0; }
+.shortcut { display: flex; gap: 5px; align-items: center; margin: 17px 0 14px; min-height: 29px; }
+kbd { display: grid; place-items: center; font: 12px/1.3 'Segoe UI', sans-serif; height: 29px; padding: 0 10px; background: #fff; border: 1px solid #d5deec; border-bottom-width: 2px; border-radius: 6px; color: #465d80; }
+.plus { font-size: 11px; color: #92a0b5; }
+.shortcut-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: #8794aa; font-size: 10px; }
+.text-button { border: 0; padding: 0; background: transparent; color: #3267d6; font-size: 11px; white-space: nowrap; }
+.text-button:hover { color: #1748aa; text-decoration: underline; }
+.preferences { margin-top: 24px; }
+.section-heading { display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; }
+.section-heading h2 { font-size: 12px; margin: 0; font-weight: 650; }
+#save-status { color: #8694a8; font-size: 10px; }
+#save-status.error { color: #b54734; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 55px; border-bottom: 1px solid #e9edf4; }
+strong { font-weight: 500; font-size: 12px; }
+small { display: block; margin-top: 4px; font-size: 10px; color: #8995a8; }
+.switch { appearance: none; position: relative; width: 33px; height: 19px; border-radius: 12px; background: #d7dfe9; margin: 0; cursor: pointer; flex-shrink: 0; transition: background .15s; }
+.switch::after { content: ''; position: absolute; top: 3px; left: 3px; width: 13px; height: 13px; background: white; border-radius: 50%; transition: translate .15s; }
+.switch:checked { background: #3267d6; }
+.switch:checked::after { translate: 14px; }
+.rate-controls { display: flex; align-items: center; gap: 12px; }
+input[type=range] { width: 120px; height: 3px; accent-color: #3267d6; }
+output { font-size: 11px; color: #697b96; min-width: 29px; }
+.field { padding: 16px 0; border-bottom: 1px solid #e9edf4; display: grid; gap: 9px; }
+.field label { font-size: 12px; }
+.field select { width: 100%; }
+.field button { justify-self: start; }
+select { max-width: 175px; border: 1px solid #dfe5ef; border-radius: 7px; background: #fff; color: #566b89; padding: 6px 8px; font-size: 11px; }
+.field select { max-width: none; }
+.last { border: 0; }
+footer { display: flex; align-items: center; gap: 6px; border-top: 1px solid #e3e8f1; margin-top: 12px; padding-top: 15px; color: #8b98ab; font-size: 10px; }
+.dot { width: 5px; height: 5px; border-radius: 50%; background: #7b9c8b; flex-shrink: 0; }
+.note { font-size: 10px; color: #97a2b3; line-height: 1.8; margin: 10px 0 0; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
